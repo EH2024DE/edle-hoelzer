@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f9f5f1;
+    color: #3e2c23;
+}
+
+header {
+    background-color: #d6c1a3;
+    padding: 2rem;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+footer {
+    background-color: #d6c1a3;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
