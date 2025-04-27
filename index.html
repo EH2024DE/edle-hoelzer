@@ -1,52 +1,49 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edle Hölzer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edle Hölzer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="navbar">
-        <img src="assets/logo.png" alt="Edle Hölzer Logo" class="logo">
-        <nav>
-            <a href="#about">Über uns</a>
-            <a href="#products">Produkte</a>
-            <a href="#philosophy">Philosophie</a>
-        </nav>
-    </header>
+  <header class="header">
+    <img src="assets/logo.png" alt="Edle Hölzer Logo" class="logo">
+    <nav class="nav">
+      <a href="#products">Produkte</a>
+      <a href="#about">Über Uns</a>
+      <a href="#philosophy">Philosophie</a>
+    </nav>
+  </header>
 
-    <section class="hero">
-        <h1>Willkommen bei Edle Hölzer</h1>
-        <p>Einzigartige Handwerkskunst aus edelsten Hölzern</p>
-    </section>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Handgefertigte Schneidebretter aus edelstem Holz</h1>
+      <p>Einzigartige Unikate – gefertigt für die Ewigkeit.</p>
+      <a href="#products" class="btn">Jetzt entdecken</a>
+    </div>
+  </section>
 
-    <main>
-        <section id="about" class="content-section">
-            <h2>Über uns</h2>
-            <p>Mit Leidenschaft und Sorgfalt fertigen wir edle Holzprodukte für höchste Ansprüche – regional, nachhaltig, individuell.</p>
-        </section>
+  <section id="products" class="products">
+    <h2>Unsere Produkte</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="assets/produktbilder/produkt1.jpg" alt="Produkt 1">
+        <h3>Schneidebrett Eiche</h3>
+      </div>
+      <div class="product-card">
+        <img src="assets/produktbilder/produkt2.jpg" alt="Produkt 2">
+        <h3>Schneidebrett Walnuss</h3>
+      </div>
+      <!-- Mehr Produkte hier -->
+    </div>
+  </section>
 
-        <section id="products" class="content-section">
-            <h2>Unsere Produkte</h2>
-            <p>Entdecke unsere Schneidebretter, Servierplatten und Holzunikate. Jedes Stück ist ein Kunstwerk.</p>
-            <div class="product-gallery">
-                <img src="assets/produktbilder/produkt1.jpg" alt="Produkt 1">
-                <img src="assets/produktbilder/produkt2.jpg" alt="Produkt 2">
-                <img src="assets/produktbilder/produkt3.jpg" alt="Produkt 3">
-            </div>
-        </section>
-
-        <section id="philosophy" class="content-section">
-            <h2>Unsere Philosophie</h2>
-            <p>Traditionelles Handwerk, höchste Qualität und echte Nachhaltigkeit stehen bei Edle Hölzer im Mittelpunkt.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 Edle Hölzer | Handwerkskunst aus Leidenschaft</p>
-    </footer>
+  <footer class="footer">
+    <p>&copy; 2025 Edle Hölzer. Alle Rechte vorbehalten.</p>
+  </footer>
 
 </body>
 </html>
