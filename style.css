@@ -1,76 +1,103 @@
 body {
-    margin: 0;
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: #f9f5f1;
-    color: #3e2c23;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #F8F4EF;
+  color: #2E2E2E;
 }
 
-.navbar {
-    background-color: #d6c1a3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #F8F4EF;
+  position: sticky;
+  top: 0;
 }
 
 .logo {
-    height: 50px;
+  height: 50px;
 }
 
-nav a {
-    margin-left: 1.5rem;
-    text-decoration: none;
-    color: #3e2c23;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #5a4332;
+.nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #2E2E2E;
+  font-weight: bold;
 }
 
 .hero {
-    background-image: url('assets/holz-hintergrund.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 6rem 2rem;
+  background-image: url('assets/holz-hintergrund.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 8rem 2rem;
+  color: white;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .hero p {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-main {
-    padding: 2rem;
+.btn {
+  background-color: #A67B5B;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-.content-section {
-    margin-bottom: 4rem;
+.btn:hover {
+  background-color: #E0C097;
 }
 
-.product-gallery {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
+.products {
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
-.product-gallery img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-footer {
-    background-color: #d6c1a3;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+.product-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  margin-top: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #F8F4EF;
+  font-size: 0.9rem;
+  color: #777;
 }
