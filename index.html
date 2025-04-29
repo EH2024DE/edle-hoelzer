@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Edle Hölzer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; margin: 0; background-color: #F1ECE7; color: #2E2B28; }
+    header { background: url('header-bg.jpg') no-repeat center center / cover; height: 100vh; display: flex; justify-content: center; align-items: center; color: white; text-align: center; }
+    .hero h1 { font-size: 3rem; background-color: rgba(0,0,0,0.4); padding: 1rem; }
+    nav { background: #BFA89A; padding: 1rem; text-align: center; }
+    nav a { margin: 0 15px; color: #2E2B28; text-decoration: none; font-weight: bold; }
+    section { padding: 4rem 2rem; }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Konfiguriere jetzt dein Traumbrett</h1>
-    <a href="konfigurator.html" class="cta-button">Jetzt konfigurieren</a>
-  </header>
   <nav>
-    <ul>
-      <li><a href="index.html">Start</a></li>
-      <li><a href="produkte.html">Produkte</a></li>
-      <li><a href="konfigurator.html">Konfigurator</a></li>
-      <li><a href="ueber-uns.html">Über uns</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-    </ul>
+    <a href="index.html">Startseite</a>
+    <a href="konfigurator.html">Konfigurator</a>
+    <a href="produkte.html">Produkte</a>
+    <a href="faq.html">FAQ</a>
+    <a href="ueber-uns.html">Über uns</a>
   </nav>
-  <footer>
-    <p>&copy; 2025 Edle Hölzer</p>
-  </footer>
+  <header>
+    <div class="hero">
+      <h1>Konfiguriere jetzt dein Traumbrett</h1>
+    </div>
+  </header>
 </body>
 </html>
