@@ -2,44 +2,35 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Edle Hölzer – Startseite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edle Hölzer</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Startseite</a></li>
-        <li><a href="produkte.html">Produkte</a></li>
-        <li><a href="konfigurator.html">Konfigurator</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="ueber-uns.html">Über uns</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="impressum.html">Impressum</a></li>
-      </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">Start</a></li>
+      <li><a href="produkte.html">Produkte</a></li>
+      <li><a href="konfigurator.html">Konfigurator</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="assets/Github_Werbevideo.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-text">
+      <h1>Konfiguriere jetzt dein Traumbrett</h1>
+      <a href="konfigurator.html" class="btn">Jetzt starten</a>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <video autoplay muted loop id="bg-video">
-        <source src="assets/Github_Werbevideo.mp4" type="video/mp4" />
-        Dein Browser unterstützt dieses Videoformat nicht.
-      </video>
-      <div class="hero-content">
-        <h1>Konfiguriere jetzt dein Traumbrett</h1>
-        <a href="konfigurator.html" class="btn">Jetzt konfigurieren</a>
-      </div>
-    </section>
-  </main>
-
   <footer>
-    <p>&copy; 2025 Edle Hölzer</p>
-    <div class="social-links">
-      <a href="https://www.instagram.com/edle.hoelzer/" target="_blank">Instagram</a>
-      <a href="https://de.pinterest.com/edlehoelzer/" target="_blank">Pinterest</a>
-    </div>
+    <p>© Edle Hölzer 2025 | <a href="impressum.html">Impressum</a></p>
   </footer>
 </body>
 </html>
