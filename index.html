@@ -4,46 +4,197 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edle Hölzer</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #d6c1b0;
+      --secondary: #8C7157;
+      --background: #FDF9F6;
+      --text-dark: #3B2F2F;
+      --hover: #e5d3c5;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background);
+      color: var(--text-dark);
+      scroll-behavior: smooth;
+    }
+    header {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    header video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .hero-content {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+    }
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2em;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+    .hero-content a {
+      padding: 12px 24px;
+      background: var(--primary);
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .hero-content a:hover {
+      background: var(--hover);
+    }
+    .products {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .products h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4em;
+      margin-bottom: 50px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 0 20px;
+    }
+    .grid-item {
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      background: white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .grid-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .grid-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    .grid-item p {
+      padding: 15px;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    footer {
+      background: var(--secondary);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    form {
+      max-width: 500px;
+      margin: 30px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+    }
+    button {
+      background: var(--primary);
+      border: none;
+      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background: var(--hover);
+    }
+  </style>
 </head>
 <body>
-
-  <header class="header">
-    <img src="assets/logo.png" alt="Edle Hölzer Logo" class="logo">
-    <nav class="nav">
-      <a href="#products">Produkte</a>
-      <a href="#about">Über Uns</a>
-      <a href="#philosophy">Philosophie</a>
-    </nav>
+  <header>
+    <video autoplay muted loop>
+      <source src="assets/Github_Werbevideo.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>Willkommen bei Edle Hölzer</h1>
+      <a href="#produkte">Produkte entdecken</a>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Handgefertigte Schneidebretter aus edelstem Holz</h1>
-      <p>Einzigartige Unikate – gefertigt für die Ewigkeit.</p>
-      <a href="#products" class="btn">Jetzt entdecken</a>
+  <section class="products" id="produkte">
+    <h2>Unsere Schneidebretter</h2>
+    <div class="grid">
+      <div class="grid-item fade-in">
+        <a href="https://www.etsy.com/de/listing/1825992842/" target="_blank"><img src="assets/produktbilder/produkt1.jpg" alt="Produkt 1"></a>
+        <p>Stirnholz Wildkirsche</p>
+      </div>
+      <div class="grid-item fade-in">
+        <a href="https://www.etsy.com/de/listing/1827805914/" target="_blank"><img src="assets/produktbilder/produkt2.jpg" alt="Produkt 2"></a>
+        <p>Bambus, Buche, Esche</p>
+      </div>
+      <div class="grid-item fade-in">
+        <a href="https://www.etsy.com/de/listing/1803930088/" target="_blank"><img src="assets/produktbilder/produkt3.jpg" alt="Produkt 3"></a>
+        <p>3D Design Stirnholz</p>
+      </div>
     </div>
   </section>
 
-  <section id="products" class="products">
-    <h2>Unsere Produkte</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="assets/produktbilder/produkt1.jpg" alt="Produkt 1">
-        <h3>Schneidebrett Eiche</h3>
-      </div>
-      <div class="product-card">
-        <img src="assets/produktbilder/produkt2.jpg" alt="Produkt 2">
-        <h3>Schneidebrett Walnuss</h3>
-      </div>
-      <!-- Mehr Produkte hier -->
-    </div>
+  <section class="contact" id="kontakt">
+    <h2 style="text-align:center; padding-top:40px">Kontakt</h2>
+    <form action="mailto:deine@emailadresse.de" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Ihr Name" required>
+      <input type="email" name="email" placeholder="Ihre E-Mail" required>
+      <textarea name="message" placeholder="Ihre Nachricht" rows="5"></textarea>
+      <button type="submit">Nachricht senden</button>
+    </form>
   </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Edle Hölzer. Alle Rechte vorbehalten.</p>
+  <footer>
+    <p>Edle Hölzer &copy; 2025 | <a href="#">Impressum</a></p>
+    <p>
+      <a href="https://www.instagram.com/edlehoelzer/" target="_blank">Instagram</a> |
+      <a href="https://www.pinterest.de/edlehoelzer/" target="_blank">Pinterest</a>
+    </p>
   </footer>
 
+  <script>
+    (() => {
+      const fadeIns = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.3 });
+      fadeIns.forEach(el => observer.observe(el));
+    })();
+  </script>
 </body>
 </html>
