@@ -2,52 +2,31 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FAQ – Edle Hölzer</title>
+  <title>FAQ</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Startseite</a></li>
-        <li><a href="produkte.html">Produkte</a></li>
-        <li><a href="konfigurator.html">Konfigurator</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="ueber-uns.html">Über uns</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="impressum.html">Impressum</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav>...</nav>
 
-  <main>
-    <section class="faq">
-      <h2>Häufig gestellte Fragen</h2>
-      <div class="accordion">
-        <div class="accordion-item">
-            <div class="accordion-content">
-            <p>Wir bieten Gravuren an und können das Brett direkt als Geschenk versenden. Schreibe uns deine Wünsche, und wir gestalten ein individuelles und einzigartiges Geschenk für deine Liebsten.</p>
-          </div>
-        </div>
-                <div class="accordion-content">
-            <p>Stirnholz ist besonders schnittfest und messerschonend, da die Fasern senkrecht zur Schneide verlaufen. Das bedeutet: Deine Messer bleiben länger scharf, und Schnittspuren auf dem Brett sind weniger sichtbar. Stirnholzbretter sind langlebig und nehmen weniger Feuchtigkeit auf, wodurch sie hygienischer bleiben. Perfekt für den täglichen Einsatz und anspruchsvolle Schneidearbeiten.</p><!-- Weitere FAQ-Einträge hier -->
-      </div>
-    </section>
-  </main>
+  <section class="faq">
+    <h2>Häufige Fragen</h2>
 
-  <footer>
-    <p>&copy; 2025 Edle Hölzer</p>
-  </footer>
+    <div class="faq-item">
+      <h3>Warum Stirnholz?</h3>
+      <p>Stirnholz ist besonders schnittfest und messerschonend ...</p>
+    </div>
+    <div class="faq-item">
+      <h3>Wann eignet sich ein Flankenholzbrett?</h3>
+      <p>Ideal für leichtere Schneidearbeiten wie Obst, Gemüse oder Brot.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Warum fertigen wir dicke Bretter an?</h3>
+      <p>Sie sind langlebig, rutschfest und können oft nachgeschliffen werden.</p>
+    </div>
 
-  <script>
-    const buttons = document.querySelectorAll('.accordion-button');
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        const content = button.nextElementSibling;
-        content.classList.toggle('active');
-      });
-    });
-  </script>
+    <a href="#top" class="btn small">Zurück nach oben</a>
+  </section>
+
+  <footer><p>© Edle Hölzer</p></footer>
 </body>
 </html>
