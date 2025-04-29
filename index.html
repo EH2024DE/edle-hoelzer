@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Edle Hölzer – handgemachte Schneidebretter aus regionalem Holz mit Liebe zum Detail und Nachhaltigkeit.">
-  <meta name="keywords" content="Schneidebrett, Stirnholz, Handarbeit, Holzmanufaktur, Gravur, Geschenk, Nachhaltigkeit">
   <title>Edle Hölzer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #FFBE98;
-      --secondary: #7F4F24;
-      --background: #F7F0E8;
-      --text-dark: #3B2F2F;
-      --hover: #f3d8c4;
+      --primary: #BFA89A;
+      --secondary: #806C5A;
+      --background: #F1ECE7;
+      --text-dark: #2E2B28;
+      --hover: #d2c2b7;
+      --highlight: #DECBB7;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -133,11 +132,21 @@
     button:hover {
       background: var(--hover);
     }
+    .section {
+      padding: 60px 20px;
+    }
+    .faq-item {
+      margin-bottom: 20px;
+    }
+    .faq-item h3 {
+      margin-bottom: 10px;
+      color: var(--secondary);
+    }
   </style>
 </head>
 <body>
   <header>
-    <video autoplay loop controls>
+    <video autoplay loop muted controls>
       <source src="assets/Github_Werbevideo.mp4" type="video/mp4">
     </video>
     <div class="hero-content">
@@ -149,24 +158,42 @@
   <section class="products" id="produkte">
     <h2>Unsere Schneidebretter</h2>
     <div class="grid">
-      <!-- Wiederhole den Block für Produkt 1 bis 9 -->
-      <div class="grid-item fade-in">
-        <a href="https://www.etsy.com/de/listing/1825992842/"><img src="assets/produktbilder/produkt1.jpg" alt="Produkt 1"></a>
-        <p>Stirnholz Wildkirsche</p>
-      </div>
-      <!-- Produkt 2 bis 9 analog hier einfügen -->
+      <div class="grid-item fade-in"><a href="https://www.etsy.com/de/listing/1825992842/"><img src="assets/produktbilder/produkt1.jpg" alt="Produkt 1"></a><p>Stirnholz Wildkirsche</p></div>
+      <div class="grid-item fade-in"><a href="https://www.etsy.com/de/listing/1827805914/"><img src="assets/produktbilder/produkt2.jpg" alt="Produkt 2"></a><p>Bambus, Buche, Esche</p></div>
+      <div class="grid-item fade-in"><a href="https://www.etsy.com/de/listing/1803930088/"><img src="assets/produktbilder/produkt3.jpg" alt="Produkt 3"></a><p>3D Design Stirnholz</p></div>
+      <div class="grid-item fade-in"><a href="https://www.etsy.com/de/listing/1828288880/"><img src="assets/produktbilder/produkt4.jpg" alt="Produkt 4"></a><p>Ahorn und Walnuss</p></div>
+      <div class="grid-item fade-in"><a href="https://www.etsy.com/de/listing/1828309322/"><img src="assets/produktbilder/produkt5.jpg" alt="Produkt 5"></a><p>Rustikales Olivenholz</p></div>
+      <div class="grid-item fade-in"><a href="https://www.etsy.com/de/listing/1828313716/"><img src="assets/produktbilder/produkt6.jpg" alt="Produkt 6"></a><p>Stirnholz mit Gravur</p></div>
+      <div class="grid-item fade-in"><a href="https://www.etsy.com/de/listing/1828318378/"><img src="assets/produktbilder/produkt7.jpg" alt="Produkt 7"></a><p>Eiche massiv</p></div>
+      <div class="grid-item fade-in"><a href="https://www.etsy.com/de/listing/1828321850/"><img src="assets/produktbilder/produkt8.jpg" alt="Produkt 8"></a><p>Buche Stirnholz natur</p></div>
+      <div class="grid-item fade-in"><a href="https://www.etsy.com/de/listing/1828324852/"><img src="assets/produktbilder/produkt9.jpg" alt="Produkt 9"></a><p>Design mit Rille</p></div>
     </div>
   </section>
 
-  <section id="about" class="products">
-    <h2>Über uns</h2>
-    <img src="assets/teamfoto.jpg" alt="Team Edle Hölzer" style="width:100%; max-width:800px; margin: 0 auto 30px; display:block; border-radius:12px">
-    <p style="max-width:800px; margin:auto;">
-      Wir sind Edle Hölzer – eine kleine Manufaktur, die sich der Kunst verschrieben hat, aus alten Hölzern einzigartige Schneidebretter zu schaffen...
+  <section class="section" id="konfigurator">
+    <h2 style="text-align:center">Konfigurator</h2>
+    <p style="text-align:center">Hier entsteht dein individuelles Schneidebrett mit Gravur, Saftrille, Füßen und Wunschmaßen.</p>
+    <!-- Hinweis: Platz für Konfigurator-Logik via JS oder WebGL-Integration, folgt als separater Modulcode -->
+    <div id="3d-view" style="height: 400px; background: #ddd; margin: 30px auto; max-width: 600px; text-align:center; line-height: 400px;">3D-Vorschau (Platzhalter)</div>
+  </section>
+
+  <section class="section" id="ueber-uns">
+    <h2 style="text-align:center">Über uns</h2>
+    <img src="assets/ueber-uns.jpg" alt="Über uns" style="max-width:100%; height:auto; display:block; margin:0 auto 20px;">
+    <p style="max-width:800px; margin: 0 auto; text-align:justify">
+      Wir sind Edle Hölzer – eine kleine Manufaktur, die sich der Kunst verschrieben hat, aus alten Hölzern einzigartige Schneidebretter zu schaffen. Gegründet von Özgür, einem erfahrenen Handwerker mit über 20 Jahren Erfahrung, und seinem Neffen Serkan, einem Ingenieur und leidenschaftlichen Fotografen, verbindet unser Team Kreativität, Handwerkskunst und innovative Ideen.
+      <br><br>Unsere Mission ist klar: Nachhaltigkeit und Qualität in jedem Stück Holz zu vereinen. Wir möchten langlebige, stilvolle Produkte schaffen, die nicht nur durch ihre Funktion, sondern auch durch ihre Schönheit Freude bereiten.
     </p>
   </section>
 
-  <!-- Weitere Sektionen wie FAQ, Konfigurator etc. würden folgen -->
+  <section class="section" id="faq">
+    <h2 style="text-align:center">FAQ</h2>
+    <div class="faq-item"><h3>Warum Stirnholz?</h3><p>Stirnholz ist besonders schnittfest und messerschonend, langlebig und hygienischer – ideal für den täglichen Einsatz.</p></div>
+    <div class="faq-item"><h3>Wann eignet sich ein Flankenholzbrett?</h3><p>Für leichtere Arbeiten wie Gemüse, Brot oder Servieren. Elegant, handlich und leicht.</p></div>
+    <div class="faq-item"><h3>Warum dicke Bretter?</h3><p>Mehr Stabilität, Langlebigkeit und rutschfest – können oft nachgeschliffen werden.</p></div>
+    <div class="faq-item"><h3>Spezialanfertigungen?</h3><p>Ja, wir bieten Gravuren, Rillen, Maße und mehr – kontaktiere uns einfach.</p></div>
+    <!-- Weitere FAQ folgen analog -->
+  </section>
 
   <section class="contact" id="kontakt">
     <h2 style="text-align:center; padding-top:40px">Kontakt</h2>
@@ -182,12 +209,12 @@
     <p>Edle Hölzer &copy; 2025 | <a href="#">Impressum</a></p>
     <p>
       <a href="https://www.instagram.com/edle.hoelzer/" target="_blank">Instagram</a> |
-      <a href="https://www.pinterest.de/edlehoelzer/" target="_blank">Pinterest</a>
+      <a href="https://de.pinterest.com/edlehoelzer/" target="_blank">Pinterest</a>
     </p>
   </footer>
 
   <script>
-    const fadeElements = document.querySelectorAll('.fade-in');
+    const fadeIns = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -195,7 +222,7 @@
         }
       });
     }, { threshold: 0.3 });
-    fadeElements.forEach(el => observer.observe(el));
+    fadeIns.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
