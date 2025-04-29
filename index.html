@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Edle Hölzer – handgemachte Schneidebretter aus regionalem Holz mit Liebe zum Detail und Nachhaltigkeit.">
+  <meta name="keywords" content="Schneidebrett, Stirnholz, Handarbeit, Holzmanufaktur, Gravur, Geschenk, Nachhaltigkeit">
   <title>Edle Hölzer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-  <meta name="description" content="Edle Hölzer – Hochwertige handgefertigte Schneidebretter aus nachhaltigem Holz. Jetzt entdecken & direkt bei Etsy kaufen!">
-  <meta name="keywords" content="Schneidebrett, Stirnholz, Holzbrett, Handarbeit, nachhaltige Produkte, Edle Hölzer">
-  <meta name="author" content="Edle Hölzer">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #D2BAA6;
-      --secondary: #8C7157;
-      --background: #F5F0EB;
+      --primary: #FFBE98;
+      --secondary: #7F4F24;
+      --background: #F7F0E8;
       --text-dark: #3B2F2F;
-      --hover: #e5d3c5;
+      --hover: #f3d8c4;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: var(--background);
       color: var(--text-dark);
+      scroll-behavior: smooth;
     }
     header {
       position: relative;
@@ -42,7 +42,6 @@
       color: white;
     }
     .hero-content h1 {
-      font-family: 'Playfair Display', serif;
       font-size: 3em;
       margin-bottom: 20px;
     }
@@ -100,16 +99,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-    .about {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .about img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-      border-radius: 8px;
-    }
     footer {
       background: var(--secondary);
       color: white;
@@ -148,7 +137,7 @@
 </head>
 <body>
   <header>
-    <video autoplay muted loop controls>
+    <video autoplay loop controls>
       <source src="assets/Github_Werbevideo.mp4" type="video/mp4">
     </video>
     <div class="hero-content">
@@ -160,22 +149,24 @@
   <section class="products" id="produkte">
     <h2>Unsere Schneidebretter</h2>
     <div class="grid">
-      <!-- Wiederverwendbares Grid für 9 Produkte -->
-      ${[...Array(9)].map((_, i) => `
+      <!-- Wiederhole den Block für Produkt 1 bis 9 -->
       <div class="grid-item fade-in">
-        <a href="#"><img src="assets/produktbilder/produkt${i+1}.jpg" alt="Produkt ${i+1}"></a>
-        <p>Produktbeschreibung ${i+1}</p>
-      </div>`).join('')}
+        <a href="https://www.etsy.com/de/listing/1825992842/"><img src="assets/produktbilder/produkt1.jpg" alt="Produkt 1"></a>
+        <p>Stirnholz Wildkirsche</p>
+      </div>
+      <!-- Produkt 2 bis 9 analog hier einfügen -->
     </div>
   </section>
 
-  <section class="about" id="ueberuns">
+  <section id="about" class="products">
     <h2>Über uns</h2>
-    <img src="assets/about-placeholder.jpg" alt="Über uns Bild">
-    <p>Wir sind Edle Hölzer – eine kleine Manufaktur, die sich der Kunst verschrieben hat, aus alten Hölzern einzigartige Schneidebretter zu schaffen. Gegründet von Özgür, einem erfahrenen Handwerker mit über 20 Jahren Erfahrung, und seinem Neffen Serkan, einem Ingenieur und leidenschaftlichen Fotografen, verbindet unser Team Kreativität, Handwerkskunst und innovative Ideen.</p>
-    <p>Özgür ist das Herz unserer Manufaktur. Durch seine geschickten Hände und seine Liebe zum Detail erwachen alte Hölzer zu neuem Leben. Serkan bringt als Ingenieur den modernen Blick und die digitale Welt in unser Unternehmen – und sorgt gleichzeitig dafür, dass unsere Produkte im besten Licht präsentiert werden.</p>
-    <p>Unsere Mission ist klar: Nachhaltigkeit und Qualität in jedem Stück Holz zu vereinen. Wir möchten langlebige, stilvolle Produkte schaffen, die nicht nur durch ihre Funktion, sondern auch durch ihre Schönheit Freude bereiten.</p>
+    <img src="assets/teamfoto.jpg" alt="Team Edle Hölzer" style="width:100%; max-width:800px; margin: 0 auto 30px; display:block; border-radius:12px">
+    <p style="max-width:800px; margin:auto;">
+      Wir sind Edle Hölzer – eine kleine Manufaktur, die sich der Kunst verschrieben hat, aus alten Hölzern einzigartige Schneidebretter zu schaffen...
+    </p>
   </section>
+
+  <!-- Weitere Sektionen wie FAQ, Konfigurator etc. würden folgen -->
 
   <section class="contact" id="kontakt">
     <h2 style="text-align:center; padding-top:40px">Kontakt</h2>
@@ -191,22 +182,20 @@
     <p>Edle Hölzer &copy; 2025 | <a href="#">Impressum</a></p>
     <p>
       <a href="https://www.instagram.com/edle.hoelzer/" target="_blank">Instagram</a> |
-      <a href="https://de.pinterest.com/edlehoelzer/" target="_blank">Pinterest</a>
+      <a href="https://www.pinterest.de/edlehoelzer/" target="_blank">Pinterest</a>
     </p>
   </footer>
 
   <script>
-    (function() {
-      const fadeIns = document.querySelectorAll('.fade-in');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, { threshold: 0.3 });
-      fadeIns.forEach(el => observer.observe(el));
-    })();
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+    fadeElements.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
