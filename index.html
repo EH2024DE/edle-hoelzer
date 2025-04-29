@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edle Hölzer</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <meta name="description" content="Edle Hölzer – Hochwertige handgefertigte Schneidebretter aus nachhaltigem Holz. Jetzt entdecken & direkt bei Etsy kaufen!">
+  <meta name="keywords" content="Schneidebrett, Stirnholz, Holzbrett, Handarbeit, nachhaltige Produkte, Edle Hölzer">
+  <meta name="author" content="Edle Hölzer">
   <style>
     :root {
-      --primary: #d6c1b0;
+      --primary: #D2BAA6;
       --secondary: #8C7157;
-      --background: #FDF9F6;
+      --background: #F5F0EB;
       --text-dark: #3B2F2F;
       --hover: #e5d3c5;
     }
@@ -18,7 +21,6 @@
       font-family: 'Poppins', sans-serif;
       background-color: var(--background);
       color: var(--text-dark);
-      scroll-behavior: smooth;
     }
     header {
       position: relative;
@@ -37,16 +39,15 @@
       top: 50%; left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      color: #fff;
+      color: white;
     }
     .hero-content h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3.2em;
+      font-size: 3em;
       margin-bottom: 20px;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
     }
     .hero-content a {
-      padding: 12px 24px;
+      padding: 10px 20px;
       background: var(--primary);
       color: var(--text-dark);
       text-decoration: none;
@@ -58,35 +59,34 @@
       background: var(--hover);
     }
     .products {
-      padding: 80px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
     .products h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.4em;
-      margin-bottom: 50px;
+      font-size: 2em;
+      margin-bottom: 40px;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
       padding: 0 20px;
     }
     .grid-item {
       overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: white;
     }
     .grid-item:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
     .grid-item img {
       width: 100%;
-      height: 280px;
-      object-fit: cover;
+      height: auto;
+      display: block;
     }
     .grid-item p {
       padding: 15px;
@@ -99,6 +99,16 @@
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+    .about {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .about img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 8px;
     }
     footer {
       background: var(--secondary);
@@ -138,7 +148,7 @@
 </head>
 <body>
   <header>
-    <video autoplay muted loop>
+    <video autoplay muted loop controls>
       <source src="assets/Github_Werbevideo.mp4" type="video/mp4">
     </video>
     <div class="hero-content">
@@ -150,19 +160,21 @@
   <section class="products" id="produkte">
     <h2>Unsere Schneidebretter</h2>
     <div class="grid">
+      <!-- Wiederverwendbares Grid für 9 Produkte -->
+      ${[...Array(9)].map((_, i) => `
       <div class="grid-item fade-in">
-        <a href="https://www.etsy.com/de/listing/1825992842/" target="_blank"><img src="assets/produktbilder/produkt1.jpg" alt="Produkt 1"></a>
-        <p>Stirnholz Wildkirsche</p>
-      </div>
-      <div class="grid-item fade-in">
-        <a href="https://www.etsy.com/de/listing/1827805914/" target="_blank"><img src="assets/produktbilder/produkt2.jpg" alt="Produkt 2"></a>
-        <p>Bambus, Buche, Esche</p>
-      </div>
-      <div class="grid-item fade-in">
-        <a href="https://www.etsy.com/de/listing/1803930088/" target="_blank"><img src="assets/produktbilder/produkt3.jpg" alt="Produkt 3"></a>
-        <p>3D Design Stirnholz</p>
-      </div>
+        <a href="#"><img src="assets/produktbilder/produkt${i+1}.jpg" alt="Produkt ${i+1}"></a>
+        <p>Produktbeschreibung ${i+1}</p>
+      </div>`).join('')}
     </div>
+  </section>
+
+  <section class="about" id="ueberuns">
+    <h2>Über uns</h2>
+    <img src="assets/about-placeholder.jpg" alt="Über uns Bild">
+    <p>Wir sind Edle Hölzer – eine kleine Manufaktur, die sich der Kunst verschrieben hat, aus alten Hölzern einzigartige Schneidebretter zu schaffen. Gegründet von Özgür, einem erfahrenen Handwerker mit über 20 Jahren Erfahrung, und seinem Neffen Serkan, einem Ingenieur und leidenschaftlichen Fotografen, verbindet unser Team Kreativität, Handwerkskunst und innovative Ideen.</p>
+    <p>Özgür ist das Herz unserer Manufaktur. Durch seine geschickten Hände und seine Liebe zum Detail erwachen alte Hölzer zu neuem Leben. Serkan bringt als Ingenieur den modernen Blick und die digitale Welt in unser Unternehmen – und sorgt gleichzeitig dafür, dass unsere Produkte im besten Licht präsentiert werden.</p>
+    <p>Unsere Mission ist klar: Nachhaltigkeit und Qualität in jedem Stück Holz zu vereinen. Wir möchten langlebige, stilvolle Produkte schaffen, die nicht nur durch ihre Funktion, sondern auch durch ihre Schönheit Freude bereiten.</p>
   </section>
 
   <section class="contact" id="kontakt">
@@ -178,13 +190,13 @@
   <footer>
     <p>Edle Hölzer &copy; 2025 | <a href="#">Impressum</a></p>
     <p>
-      <a href="https://www.instagram.com/edlehoelzer/" target="_blank">Instagram</a> |
-      <a href="https://www.pinterest.de/edlehoelzer/" target="_blank">Pinterest</a>
+      <a href="https://www.instagram.com/edle.hoelzer/" target="_blank">Instagram</a> |
+      <a href="https://de.pinterest.com/edlehoelzer/" target="_blank">Pinterest</a>
     </p>
   </footer>
 
   <script>
-    (() => {
+    (function() {
       const fadeIns = document.querySelectorAll('.fade-in');
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
