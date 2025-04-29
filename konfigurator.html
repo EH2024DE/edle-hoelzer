@@ -3,20 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <title>Konfigurator</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { margin: 0; }
+    canvas { display: block; }
+    #controls { position: absolute; top: 10px; left: 10px; z-index: 1; background: rgba(255,255,255,0.8); padding: 10px; }
+  </style>
 </head>
 <body>
-  <nav>...</nav>
-
-  <section class="konfigurator">
-    <h2>Konfigurator</h2>
-    <p>Wähle Größe, Stärke, Saftrille, Füße und Gravur</p>
-    <div class="konfigurator-box">
-      <p>3D-Vorschau folgt hier</p>
-      <!-- Optional: Integration über Three.js/WebGL -->
-    </div>
-  </section>
-
-  <footer><p>© Edle Hölzer</p></footer>
+  <div id="controls">
+    <label for="engraving">Gravur:</label>
+    <input type="text" id="engraving" />
+    <button id="update">Aktualisieren</button>
+  </div>
+  <script type="module" src="konfigurator.js"></script>
 </body>
 </html>
